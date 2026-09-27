@@ -1,0 +1,108 @@
+:root {
+  --color-bg: #ffffff;
+  --color-bg-soft: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-soft: #fff7f7;
+  --color-primary: #5640a4;
+  --color-primary-dark: #c182be;
+  --color-primary-light: #fdecec;
+  --color-text: #171717;
+  --color-text-secondary: #4b4b4b;
+  --color-text-muted: #737373;
+  --color-border: #eaeaea;
+  --color-border-light: #f1f1f1;
+  --color-shadow: rgba(23, 23, 23, 0.08);
+  --color-shadow-strong: rgba(23, 23, 23, 0.12);
+  --radius: 20px;
+  --container: 1200px;
+  --transition: 220ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(232, 93, 93, 0.08), transparent 30%),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-soft) 100%);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.08;
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+button,
+input,
+textarea,
+a {
+  transition: all var(--transition);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(232, 93, 93, 0.9);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

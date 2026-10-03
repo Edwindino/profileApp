@@ -31,7 +31,6 @@ export function Navbar() {
       <nav className="navbar container" aria-label="Main navigation">
         <a href="#home" className="brand" aria-label="Go to home section">
           <span className="brand-mark">ED</span>
-          <span>Edwin Dino</span>
         </a>
 
         <button

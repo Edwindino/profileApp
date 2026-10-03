@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'motion/react';
+import profileImage from '../assets/edwin_image.jpeg';
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/edwindino' },
@@ -53,16 +54,31 @@ export function Hero() {
          Hi, I&apos;m Edwin Dino
         </motion.p>
 
-        <motion.h1
+       <motion.div
+          className="hero-title-row"
+          variants={itemVariants}
+      >
+       <motion.h1
           animate={{ x: [-12, 12, -12] }}
           transition={{
           duration: 7,
           repeat: Infinity,
           ease: "easeInOut",
-         }}
-        >
-         Full Stack Developer<span className="accent-text">.</span>
-        </motion.h1>
+        }}
+      >
+    Full Stack Developer<span className="accent-text">.</span>
+  </motion.h1>
+
+  <motion.img
+    src= {profileImage}
+    alt="Edwin Dino"
+    className="hero-profile-image"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8 }}
+  />
+</motion.div>
+
 
         <motion.p className="lead" variants={itemVariants}>
           I build modern, responsive, and user-centered digital experiences

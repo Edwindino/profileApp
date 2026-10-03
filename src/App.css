@@ -250,6 +250,7 @@ p {
 }
 
 .lead {
+  margin-top: 1.5rem;
   max-width: 620px;
   font-size: 1.08rem;
   margin-bottom: 2rem;
@@ -830,5 +831,37 @@ p {
     width: 100%;
     justify-content: center;
   }
+}
+
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-title-row h1 {
+  margin: 0;
+  flex: 1;
+}
+
+.hero-profile-image {
+  width: 160px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 10%;
+  display: block;
+  border: 3px solid var(--accent-color);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 }
 
